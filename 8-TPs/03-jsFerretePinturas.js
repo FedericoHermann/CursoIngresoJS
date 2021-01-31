@@ -4,10 +4,35 @@ B.	Al ingresar una temperatura en Centígrados debemos mostrar la temperatura en
 */
 function FahrenheitCentigrados () 
 {
-	
+    //declaro variables
+    let temperatura;
+    let conversion;
+
+    //asigno valor
+    temperatura = parseInt(document.getElementById("txtIdTemperatura").value);
+
+    //opero en la conversión
+    conversion = temperatura - 32;
+
+    //muestro resultado en pantalla
+    alert(`La temperatura ${temperatura} ºF corresponde a ${conversion} ºC`);
+
+
 }
 
 function CentigradosFahrenheit () 
 {
-	
+    //declaro variables
+    let temperatura;
+    let conversion;
+
+    //asigno valor
+    temperatura = parseInt(document.getElementById("txtIdTemperatura").value);
+
+    //opero en la conversión
+    conversion = temperatura + 32;
+
+    //muestro resultado en pantalla
+    alert(`La temperatura ${temperatura} ºC corresponde a ${conversion} ºF`);
+    
 }
