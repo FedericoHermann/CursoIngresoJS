@@ -13,7 +13,7 @@ function mostrarAumento()
 	sueldo = parseInt(document.getElementById("txtIdSueldo").value);
 
 	//calculamos el aumento y lo asignamos a otra variable
-	resultado = sueldo * 1.10
+	resultado = sueldo * 1.10;
 	
 	//ponemos el resultado en el cuadro de texto solicitado
 	document.getElementById("txtIdResultado").value = resultado;
