@@ -8,6 +8,9 @@ function mostrar()
 	dato = document.getElementById("txtIdNombre").value;
 
 	alert(dato);
+
+	document.getElementById("txtIdNombre").value = "";
+	//Deja con carácter vacío el valor de la caja de texto creada en HTML
 }
 
 
