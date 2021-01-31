@@ -9,13 +9,13 @@ function FahrenheitCentigrados ()
     let conversion;
 
     //asigno valor
-    temperatura = parseInt(document.getElementById("txtIdTemperatura").value);
+    temperatura = parseFloat(document.getElementById("txtIdTemperatura").value);
 
     //opero en la conversión
     conversion = temperatura - 32;
 
     //muestro resultado en pantalla
-    alert(`La temperatura ${temperatura} ºF corresponde a ${conversion} ºC`);
+    alert(`La temperatura ${temperatura.toFixed(2)} ºF corresponde a ${conversion.toFixed(2)} ºC`);
 
 
 }
@@ -27,12 +27,12 @@ function CentigradosFahrenheit ()
     let conversion;
 
     //asigno valor
-    temperatura = parseInt(document.getElementById("txtIdTemperatura").value);
+    temperatura = parseFloat(document.getElementById("txtIdTemperatura").value);
 
     //opero en la conversión
     conversion = temperatura + 32;
 
     //muestro resultado en pantalla
-    alert(`La temperatura ${temperatura} ºC corresponde a ${conversion} ºF`);
+    alert(`La temperatura ${temperatura.toFixed(2)} ºC corresponde a ${conversion.toFixed(2)} ºF`);
     
 }

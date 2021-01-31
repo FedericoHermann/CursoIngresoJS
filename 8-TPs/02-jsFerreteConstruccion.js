@@ -14,15 +14,15 @@ function Rectangulo ()
     let resultado;
 
 //asigno y parseo valores a cada variable
-    largo = parseInt(document.getElementById("txtIdLargo").value);
-    ancho = parseInt(document.getElementById("txtIdAncho").value);
+    largo = parseFloat(document.getElementById("txtIdLargo").value);
+    ancho = parseFloat(document.getElementById("txtIdAncho").value);
     
 
 // opero para obetener el resultado
     resultado = (largo*2 + ancho*2)*3;
 
 //pongo en pantalla el resultado
-    alert(`La cantidad de Alambre necesaria para rodear el terreno rectangular, con tres hilos de alambre es de: ${resultado} metros`);
+    alert(`La cantidad de Alambre necesaria para rodear el terreno rectangular, con tres hilos de alambre es de: ${resultado.toFixed(2)} metros`);
 
 }
 
@@ -33,13 +33,13 @@ function Circulo ()
     let resultado;
 
 //asigno y parseo valores a cada variable
-    radio = parseInt(document.getElementById("txtIdRadio").value);
+    radio = parseFloat(document.getElementById("txtIdRadio").value);
 
 // opero para obetener el resultado
     resultado = (2*radio)*3;
 
 //pongo en pantalla el resultado
-alert(`La cantidad de Alambre necesaria para rodear el terreno circular, con tres hilos de alambre es de: ${resultado} metros`);    
+alert(`La cantidad de Alambre necesaria para rodear el terreno circular, con tres hilos de alambre es de: ${resultado.toFixed(2)} metros`);    
 }
 
 function Materiales () 
@@ -51,7 +51,7 @@ function Materiales ()
     let cal;
     let cemento;
 
-//asigno y parseo valores a cada variable
+//asigno y parseo valores a cada variable (uso parseInt para que la cantidad de bolsas sea siempre entera)
     largo = parseInt(document.getElementById("txtIdLargo").value);
     ancho = parseInt(document.getElementById("txtIdAncho").value);
 

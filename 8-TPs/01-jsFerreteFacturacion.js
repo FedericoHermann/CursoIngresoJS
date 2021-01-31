@@ -12,15 +12,15 @@ function Sumar ()
     let resultado;
 
     //asigno y parseo valores a cada variable
-    precio1 = parseInt(document.getElementById("txtIdPrecioUno").value);
-    precio2 = parseInt(document.getElementById("txtIdPrecioDos").value);
-    precio3 = parseInt(document.getElementById("txtIdPrecioTres").value);
+    precio1 = parseFloat(document.getElementById("txtIdPrecioUno").value);
+    precio2 = parseFloat(document.getElementById("txtIdPrecioDos").value);
+    precio3 = parseFloat(document.getElementById("txtIdPrecioTres").value);
 
     //Opero con las variables
     resultado = precio1 + precio2 + precio3;
 
     //utilizo "alert" para enviar el valor de resultado a pantalla
-    alert(`La suma de los precios ingresados es: ${resultado}`);
+    alert(`La suma de los precios ingresados es: ${resultado.toFixed(2)}`);
     
 }
 function Promedio () 
@@ -32,15 +32,15 @@ function Promedio ()
     let resultado;
 
     //asigno y parseo valores a cada variable
-    precio1 = parseInt(document.getElementById("txtIdPrecioUno").value);
-    precio2 = parseInt(document.getElementById("txtIdPrecioDos").value);
-    precio3 = parseInt(document.getElementById("txtIdPrecioTres").value);
+    precio1 = parseFloat(document.getElementById("txtIdPrecioUno").value);
+    precio2 = parseFloat(document.getElementById("txtIdPrecioDos").value);
+    precio3 = parseFloat(document.getElementById("txtIdPrecioTres").value);
 
     //Opero con las variables
     resultado = (precio1 + precio2 + precio3)/3;
 
     //utilizo "alert" para enviar el valor de resultado a pantalla
-    alert(`El promedio de los precios ingresados es: ${resultado}`);
+    alert(`El promedio de los precios ingresados es: ${resultado.toFixed(2)}`);
 }
 function PrecioFinal () 
 {
@@ -52,14 +52,14 @@ function PrecioFinal ()
     let resultado;
 
     //asigno y parseo valores a cada variable
-    precio1 = parseInt(document.getElementById("txtIdPrecioUno").value);
-    precio2 = parseInt(document.getElementById("txtIdPrecioDos").value);
-    precio3 = parseInt(document.getElementById("txtIdPrecioTres").value);
+    precio1 = parseFloat(document.getElementById("txtIdPrecioUno").value);
+    precio2 = parseFloat(document.getElementById("txtIdPrecioDos").value);
+    precio3 = parseFloat(document.getElementById("txtIdPrecioTres").value);
 
     //Opero con las variables
     resultado = (precio1 + precio2 + precio3)*1.21;
 
     //utilizo "alert" para enviar el valor de resultado a pantalla
-    alert(`El precio final (IVA incluido 21%) es: ${resultado}`);    
+    alert(`El precio final (IVA incluido 21%) es: ${resultado.toFixed(2)}`);    
 
 }
