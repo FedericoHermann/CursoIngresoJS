@@ -13,7 +13,8 @@ function mostrar()
 		//tomo el valor recavado por el user input de edad en la variable "edad"
 		edad = document.getElementById("txtIdEdad").value;
 	
-		//pone en pantalla mediante un cuadro de diálogo el valor de ambas variables dentro de una cadena de texto
-	alert("Su nombre es "+nombre+" y su edad es "+edad+" años.");
+		//pone en pantalla mediante un cuadro de diálogo el valor de ambas variables dentro de una cadena de texto 
+		//anteriormente: alert("Su nombre es "+nombre+" y su edad es "+edad+" años.");
+	alert(`Su nombre es ${nombre} y tiene ${edad} años.`);
 }
 
