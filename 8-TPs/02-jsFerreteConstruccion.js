@@ -36,7 +36,7 @@ function Circulo ()
     radio = parseFloat(document.getElementById("txtIdRadio").value);
 
 // opero para obetener el resultado
-    resultado = (2*radio)*3;
+    resultado = (2*Math.PI*radio)*3;
 
 //pongo en pantalla el resultado
 alert(`La cantidad de Alambre necesaria para rodear el terreno circular, con tres hilos de alambre es de: ${resultado.toFixed(2)} metros`);    
