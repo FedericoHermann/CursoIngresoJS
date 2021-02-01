@@ -1,8 +1,13 @@
 /*
+
+Hermann Federico
+
 Debemos lograr tomar el importe por ID ,
 transformarlo a entero (parseInt), luego
 mostrar el importe con un aumento del 10 %
-en el cuadro de texto "RESULTADO".*/
+en el cuadro de texto "RESULTADO".
+
+Ejercicio 09*/
 function mostrarAumento()
 {
 	//declaro las variables y reservo espacio en la memoria

@@ -1,7 +1,12 @@
 /*
+
+Hermann Federico	
+
 Debemos lograr tomar Los numeros por ID ,
 transformarlos a enteros (parseInt) y Sumarlos.
-mostrar el resulto por medio de "ALERT"*/
+mostrar el resulto por medio de "ALERT"
+
+Ejercicio 06*/
 function sumar()
 {
 	//declaro las variables y reservo espacio en la memoria
