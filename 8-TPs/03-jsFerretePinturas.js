@@ -12,7 +12,7 @@ function FahrenheitCentigrados ()
     temperatura = parseFloat(document.getElementById("txtIdTemperatura").value);
 
     //opero en la conversión
-    conversion = temperatura - 32;
+    conversion = (temperatura - 32)/1.8;
 
     //muestro resultado en pantalla
     alert(`La temperatura ${temperatura.toFixed(2)} ºF corresponde a ${conversion.toFixed(2)} ºC`);
@@ -30,7 +30,7 @@ function CentigradosFahrenheit ()
     temperatura = parseFloat(document.getElementById("txtIdTemperatura").value);
 
     //opero en la conversión
-    conversion = temperatura + 32;
+    conversion = (temperatura*1.8) + 32;
 
     //muestro resultado en pantalla
     alert(`La temperatura ${temperatura.toFixed(2)} ºC corresponde a ${conversion.toFixed(2)} ºF`);
