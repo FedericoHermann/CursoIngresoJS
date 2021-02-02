@@ -17,8 +17,11 @@ function sumar()
 	let resultado;
 	
 	//Asigno valores a traves del input del usuario a cada variable
-	numerouno = parseInt(document.getElementById("txtIdNumeroUno").value);
-	numerodos = parseInt(document.getElementById("txtIdNumeroDos").value);
+	numerouno = document.getElementById("txtIdNumeroUno").value;
+	numerodos = document.getElementById("txtIdNumeroDos").value;
+	
+	numerouno = parseInt(numerouno);
+	numerodos = parseInt(numerodos);
 	
 	//Preparo la operación de las variables numerouno y numero dos, dentro del valor de la variable resultado
 	resultado = numerouno + numerodos;
@@ -35,8 +38,11 @@ function restar()
 	let resultado;
 	
 	//Asigno valores a traves del input del usuario a cada variable
-	numerouno = parseInt(document.getElementById("txtIdNumeroUno").value);
-	numerodos = parseInt(document.getElementById("txtIdNumeroDos").value);
+	numerouno = document.getElementById("txtIdNumeroUno").value;
+	numerodos = document.getElementById("txtIdNumeroDos").value;
+	
+	numerouno = parseInt(numerouno);
+	numerodos = parseInt(numerodos);
 
 	//Preparo la operación de las variables numerouno y numero dos, dentro del valor de la variable resultado
 	resultado = numerouno - numerodos;
@@ -53,9 +59,12 @@ function multiplicar()
 	let resultado;
 	
 	//Asigno valores a traves del input del usuario a cada variable
-	numerouno = parseInt(document.getElementById("txtIdNumeroUno").value);
-	numerodos = parseInt(document.getElementById("txtIdNumeroDos").value);
-
+	numerouno = document.getElementById("txtIdNumeroUno").value;
+	numerodos = document.getElementById("txtIdNumeroDos").value;
+	
+	numerouno = parseInt(numerouno);
+	numerodos = parseInt(numerodos);
+	
 	//Preparo la operación de las variables numerouno y numero dos, dentro del valor de la variable resultado
 	resultado = numerouno * numerodos;
 	
@@ -70,9 +79,12 @@ function dividir()
 	let numerodos;
 	let resultado;
 	
-	//Asigno valores a traves del input del usuario a cada variable
-	numerouno = parseInt(document.getElementById("txtIdNumeroUno").value);
-	numerodos = parseInt(document.getElementById("txtIdNumeroDos").value);
+//Asigno valores a traves del input del usuario a cada variable
+	numerouno = document.getElementById("txtIdNumeroUno").value;
+	numerodos = document.getElementById("txtIdNumeroDos").value;
+	
+	numerouno = parseInt(numerouno);
+	numerodos = parseInt(numerodos);
 
 		// construyo un condicional para excluir la posibilidad de división por 0
 		if (numerodos === 0) {
@@ -85,4 +97,5 @@ function dividir()
 	//pongo en pantalla el resultado de la suma
 	alert(`El Cociente es ${resultado}`);
 }
+
 
