@@ -15,7 +15,9 @@ function mostrarAumento()
 	let resultado;
 
 	//Asignamos el valor del input "sueldo" en la variable correspondiente
-	sueldo = parseInt(document.getElementById("txtIdSueldo").value);
+	sueldo = document.getElementById("txtIdSueldo").value;
+
+	sueldo = parseInt(sueldo);
 
 	//calculamos el aumento y lo asignamos a otra variable
 	resultado = sueldo * 1.10;
