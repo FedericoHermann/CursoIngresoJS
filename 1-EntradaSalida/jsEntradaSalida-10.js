@@ -15,7 +15,9 @@ function mostrarAumento()
 	let resultado;
 
 	//Asignamos el valor del input "importe" en la variable correspondiente
-	importe = parseInt(document.getElementById("txtIdImporte").value);
+	importe = document.getElementById("txtIdImporte").value;
+
+	importe = parseInt(importe);
 
 	//calculamos la disminución y lo asignamos a otra variable
 	resultado = importe - (importe * 0.250);
