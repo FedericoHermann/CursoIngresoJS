@@ -16,8 +16,11 @@ function SacarResto()
 	let resto;
 
 	//Asigno valores a traves del input del usuario a cada variable
-	dividendo = parseInt(document.getElementById("txtIdNumeroDividendo").value);
-	divisor = parseInt(document.getElementById("txtIdNumeroDivisor").value);
+	dividendo = document.getElementById("txtIdNumeroDividendo").value;
+	divisor = document.getElementById("txtIdNumeroDivisor").value;
+
+	dividendo = parseInt(dividendo);
+	divisor = parseInt(divisor);
 	
 	// construyo un condicional para excluir la posibilidad de división por 0
 	if (divisor === 0) {
