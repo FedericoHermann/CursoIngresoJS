@@ -17,9 +17,13 @@ function Sumar ()
     let resultado;
 
     //asigno y parseo valores a cada variable
-    precio1 = parseFloat(document.getElementById("txtIdPrecioUno").value);
-    precio2 = parseFloat(document.getElementById("txtIdPrecioDos").value);
-    precio3 = parseFloat(document.getElementById("txtIdPrecioTres").value);
+    precio1 = document.getElementById("txtIdPrecioUno").value;
+    precio2 = pdocument.getElementById("txtIdPrecioDos").value;
+    precio3 = document.getElementById("txtIdPrecioTres").value;
+
+    precio1 = parseInt(precio1);
+    precio2 = parseInt(precio2);
+    precio3 = parseInt(precio3);
 
     //Opero con las variables
     resultado = precio1 + precio2 + precio3;
@@ -37,9 +41,13 @@ function Promedio ()
     let resultado;
 
     //asigno y parseo valores a cada variable
-    precio1 = parseFloat(document.getElementById("txtIdPrecioUno").value);
-    precio2 = parseFloat(document.getElementById("txtIdPrecioDos").value);
-    precio3 = parseFloat(document.getElementById("txtIdPrecioTres").value);
+    precio1 = document.getElementById("txtIdPrecioUno").value;
+    precio2 = pdocument.getElementById("txtIdPrecioDos").value;
+    precio3 = document.getElementById("txtIdPrecioTres").value;
+
+    precio1 = parseInt(precio1);
+    precio2 = parseInt(precio2);
+    precio3 = parseInt(precio3);
 
     //Opero con las variables
     resultado = (precio1 + precio2 + precio3)/3;
@@ -57,9 +65,13 @@ function PrecioFinal ()
     let resultado;
 
     //asigno y parseo valores a cada variable
-    precio1 = parseFloat(document.getElementById("txtIdPrecioUno").value);
-    precio2 = parseFloat(document.getElementById("txtIdPrecioDos").value);
-    precio3 = parseFloat(document.getElementById("txtIdPrecioTres").value);
+    precio1 = document.getElementById("txtIdPrecioUno").value;
+    precio2 = pdocument.getElementById("txtIdPrecioDos").value;
+    precio3 = document.getElementById("txtIdPrecioTres").value;
+
+    precio1 = parseInt(precio1);
+    precio2 = parseInt(precio2);
+    precio3 = parseInt(precio3);
 
     //Opero con las variables
     resultado = (precio1 + precio2 + precio3)*1.21;
