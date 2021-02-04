@@ -15,12 +15,14 @@ function Rectangulo ()
 //asigno espacio de memoria para declarar mis variables
     let largo;
     let ancho;
-    let radio;
     let resultado;
 
 //asigno y parseo valores a cada variable
-    largo = parseFloat(document.getElementById("txtIdLargo").value);
-    ancho = parseFloat(document.getElementById("txtIdAncho").value);
+    largo = document.getElementById("txtIdLargo").value;
+    ancho = document.getElementById("txtIdAncho").value;
+
+    largo = parseFloat(largo);
+    ancho = parseFloat(ancho);
     
 
 // opero para obetener el resultado
@@ -38,7 +40,8 @@ function Circulo ()
     let resultado;
 
 //asigno y parseo valores a cada variable
-    radio = parseFloat(document.getElementById("txtIdRadio").value);
+    radio = document.getElementById("txtIdRadio").value;
+    radio = parseFloat(radio);
 
 // opero para obetener el resultado
     resultado = (2*Math.PI*radio)*3;
@@ -57,8 +60,11 @@ function Materiales ()
     let cemento;
 
 //asigno y parseo valores a cada variable (uso parseInt para que la cantidad de bolsas sea siempre entera)
-    largo = parseInt(document.getElementById("txtIdLargo").value);
-    ancho = parseInt(document.getElementById("txtIdAncho").value);
+    largo = document.getElementById("txtIdLargo").value;
+    ancho = document.getElementById("txtIdAncho").value;
+
+    largo = parseInt(largo);
+    ancho = parseInt(ancho);
 
 
 // opero para obetener el resultado

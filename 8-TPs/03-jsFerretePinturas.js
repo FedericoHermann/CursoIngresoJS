@@ -14,7 +14,8 @@ function FahrenheitCentigrados ()
     let conversion;
 
     //asigno valor
-    temperatura = parseFloat(document.getElementById("txtIdTemperatura").value);
+    temperatura = document.getElementById("txtIdTemperatura").value;
+    temperatura = parseFloat(temperatura);
 
     //opero en la conversión
     conversion = (temperatura - 32)/1.8;
@@ -32,8 +33,9 @@ function CentigradosFahrenheit ()
     let conversion;
 
     //asigno valor
-    temperatura = parseFloat(document.getElementById("txtIdTemperatura").value);
-
+    temperatura = document.getElementById("txtIdTemperatura").value;
+    temperatura = parseFloat(temperatura);
+    
     //opero en la conversión
     conversion = (temperatura*1.8) + 32;
 
