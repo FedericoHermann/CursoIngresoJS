@@ -10,5 +10,156 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+     
+    //defino variables
+    let cantidad;
+    let marca;
+    let precioOrig;
+    let precioDesc;
+    let precioFinal;
+    let iibb;
+
+    //asigno valores a las cantidades
+    cantidad = document.getElementById("txtIdCantidad").value;
+    cantidad = parseInt(cantidad);
+
+    //asigno valores a la elección de "marca"
+    marca = document.getElementById("Marca");
+    marca = toString(marca);
+
+    //establezco el precio original
+    precioOrig = 35;
+
+    //Bloque de código para condiciones de venta a aplicar según cantidad y marca.
+    if (cantidad >= 6) {
+         //A.Si compra 6 o más  lamparitas bajo consumo tiene un descuento del 50%. 
+         precioDesc = (precioOrig*cantidad)*(50/100);
+         precioFinal = precioDesc; 
+         precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
+            if (precioFinal > 120) { //calculo IIBB
+                iibb = precioFinal * 0.10; 
+                document.getElementById("txtIdprecioDescuento").value = precioFinal;
+                alert(`Usted pago $${iibb} en concepto de IIBB `);
+            } else {
+                document.getElementById("txtIdprecioDescuento").value = precioFinal; 
+            } 
+    } else {
+            /*B.Si compra 5 lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 % 
+            y si es de otra marca el descuento es del 30%.*/
+            switch (cantidad) {
+                    case 5:
+                        if (marca === "ArgentinaLuz") {
+                            precioDesc = (precioOrig*cantidad)*(40/100);
+                            precioFinal = precioDesc; 
+                            precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
+                                if (precioFinal > 120) { //calculo IIBB
+                                   iibb = precioFinal * 0.10; 
+                                   document.getElementById("txtIdprecioDescuento").value = precioFinal;
+                                   alert(`Usted pago $${iibb} en concepto de IIBB `);
+                                } else {
+                                   document.getElementById("txtIdprecioDescuento").value = precioFinal; 
+                                }
+                        } else {
+                            precioDesc = (precioOrig*cantidad)*(30/100);
+                            precioFinal = precioDesc; 
+                            precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
+                                if (precioFinal > 120) { //calculo IIBB
+                                    iibb = precioFinal * 0.10; 
+                                    document.getElementById("txtIdprecioDescuento").value = precioFinal;
+                                    alert(`Usted pago $${iibb} en concepto de IIBB `);
+                                } else {
+                                     document.getElementById("txtIdprecioDescuento").value = precioFinal; 
+                                }
+                            }
+                        break;
+                     /*C.Si compra 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas” 
+                     se hace un descuento del 25 % y si es de otra marca el descuento es del 20%.*/
+
+                    case 4:
+                        if (marca === "ArgentinaLuz" || marca === "FelipeLamparas") {
+                            precioDesc = (precioOrig*cantidad)*(25/100);
+                            precioFinal = precioDesc; 
+                            precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
+                                 if (precioFinal > 120) { //calculo IIBB
+                                    iibb = precioFinal * 0.10; 
+                                    document.getElementById("txtIdprecioDescuento").value = precioFinal;
+                                    alert(`Usted pago $${iibb} en concepto de IIBB `);
+                                } else {
+                                     document.getElementById("txtIdprecioDescuento").value = precioFinal;
+                                } 
+                        } else {
+                            precioDesc = (precioOrig*cantidad)*(20/100);
+                            precioFinal = precioDesc; 
+                            precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
+                                 if (precioFinal > 120) { //calculo IIBB
+                                    iibb = precioFinal * 0.10; 
+                                    document.getElementById("txtIdprecioDescuento").value = precioFinal;
+                                    alert(`Usted pago $${iibb} en concepto de IIBB `);
+                                } else {
+                                     document.getElementById("txtIdprecioDescuento").value = precioFinal;
+                                } 
+                        }
+                        
+                         break;
+
+                    /*D. Si compra 3 lamparitas bajo consumo marca "ArgentinaLuz"  el descuento es del 15%, 
+                    si es  “FelipeLamparas” se hace un descuento del 10 % y si es de otra marca un 5%.*/
+                    case 3:
+                        if (marca === "ArgentinaLuz") {
+                            precioDesc = (precioOrig*cantidad)*(15/100);
+                            precioFinal = precioDesc; 
+                            precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
+                                if (precioFinal > 120) { //calculo IIBB
+                                      iibb = precioFinal * 0.10; 
+                                      document.getElementById("txtIdprecioDescuento").value = precioFinal;
+                                      alert(`Usted pago $${iibb} en concepto de IIBB `);
+                                    } else {
+                                     document.getElementById("txtIdprecioDescuento").value = precioFinal;
+                                    } 
+                            } else {
+                                if (marca === "FelipeLamparas") {
+                                    precioDesc = (precioOrig*cantidad)*(10/100);
+                                    precioFinal = precioDesc; 
+                                    precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
+                                        if (precioFinal > 120) { //calculo IIBB
+                                             iibb = precioFinal * 0.10; 
+                                             document.getElementById("txtIdprecioDescuento").value = precioFinal;
+                                             alert(`Usted pago $${iibb} en concepto de IIBB `);
+                                         } else {
+                                            document.getElementById("txtIdprecioDescuento").value = precioFinal;
+                                        } 
+                                } else {
+                                    precioDesc = (precioOrig*cantidad)*(05/100);
+                                    precioFinal = precioDesc; 
+                                    precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
+                                     if (precioFinal > 120) { //calculo IIBB
+                                            iibb = precioFinal * 0.10; 
+                                            document.getElementById("txtIdprecioDescuento").value = precioFinal;
+                                            alert(`Usted pago $${iibb} en concepto de IIBB `);
+                                        } else {
+                                            document.getElementById("txtIdprecioDescuento").value = precioFinal;
+                                        } 
+                                    document.getElementById("txtIdprecioDescuento").value = precioDesc;
+                                }
+                        }
+                        break;
+                   
+                 }
+        
+            
+             }
 }
+    
+   
+    
+       
+            
+
+
+
+       
+    
+
+    
+
+
