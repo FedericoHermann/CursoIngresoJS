@@ -49,27 +49,14 @@ function CalcularPrecio ()
             switch (cantidad) {
                     case 5:
                         if (marca === "ArgentinaLuz") {
-                            precioDesc = (precioOrig*cantidad)*(40/100);
+                            precioDesc = (precioOrig*cantidad)/1.4;
                             precioFinal = precioDesc; 
                             precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
-                                if (precioFinal > 120) { //calculo IIBB
-                                   iibb = precioFinal * 0.10; 
-                                   document.getElementById("txtIdprecioDescuento").value = precioFinal;
-                                   alert(`Usted pago $${iibb} en concepto de IIBB `);
-                                } else {
-                                   document.getElementById("txtIdprecioDescuento").value = precioFinal; 
-                                }
+                                
                         } else {
-                            precioDesc = (precioOrig*cantidad)*(30/100);
+                            precioDesc = (precioOrig*cantidad)/1.3;
                             precioFinal = precioDesc; 
-                            precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
-                                if (precioFinal > 120) { //calculo IIBB
-                                    iibb = precioFinal * 0.10; 
-                                    document.getElementById("txtIdprecioDescuento").value = precioFinal;
-                                    alert(`Usted pago $${iibb} en concepto de IIBB `);
-                                } else {
-                                     document.getElementById("txtIdprecioDescuento").value = precioFinal; 
-                                }
+                            precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado      
                             }
                         break;
                      /*C.Si compra 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas” 
@@ -77,27 +64,14 @@ function CalcularPrecio ()
 
                     case 4:
                         if (marca === "ArgentinaLuz" || marca === "FelipeLamparas") {
-                            precioDesc = (precioOrig*cantidad)*(25/100);
+                            precioDesc = (precioOrig*cantidad)/1.25;
                             precioFinal = precioDesc; 
                             precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
-                                 if (precioFinal > 120) { //calculo IIBB
-                                    iibb = precioFinal * 0.10; 
-                                    document.getElementById("txtIdprecioDescuento").value = precioFinal;
-                                    alert(`Usted pago $${iibb} en concepto de IIBB `);
-                                } else {
-                                     document.getElementById("txtIdprecioDescuento").value = precioFinal;
-                                } 
+                                
                         } else {
-                            precioDesc = (precioOrig*cantidad)*(20/100);
+                            precioDesc = (precioOrig*cantidad)/1.2;
                             precioFinal = precioDesc; 
                             precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
-                                 if (precioFinal > 120) { //calculo IIBB
-                                    iibb = precioFinal * 0.10; 
-                                    document.getElementById("txtIdprecioDescuento").value = precioFinal;
-                                    alert(`Usted pago $${iibb} en concepto de IIBB `);
-                                } else {
-                                     document.getElementById("txtIdprecioDescuento").value = precioFinal;
-                                } 
                         }
                         
                          break;
@@ -106,48 +80,38 @@ function CalcularPrecio ()
                     si es  “FelipeLamparas” se hace un descuento del 10 % y si es de otra marca un 5%.*/
                     case 3:
                         if (marca === "ArgentinaLuz") {
-                            precioDesc = (precioOrig*cantidad)*(15/100);
+                            precioDesc = (precioOrig*cantidad)/1.15;
                             precioFinal = precioDesc; 
                             precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
-                                if (precioFinal > 120) { //calculo IIBB
-                                      iibb = precioFinal * 0.10; 
-                                      document.getElementById("txtIdprecioDescuento").value = precioFinal;
-                                      alert(`Usted pago $${iibb} en concepto de IIBB `);
-                                    } else {
-                                     document.getElementById("txtIdprecioDescuento").value = precioFinal;
-                                    } 
+                                
                             } else {
                                 if (marca === "FelipeLamparas") {
-                                    precioDesc = (precioOrig*cantidad)*(10/100);
+                                    precioDesc = (precioOrig*cantidad)/1.1;
                                     precioFinal = precioDesc; 
                                     precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
-                                        if (precioFinal > 120) { //calculo IIBB
-                                             iibb = precioFinal * 0.10; 
-                                             document.getElementById("txtIdprecioDescuento").value = precioFinal;
-                                             alert(`Usted pago $${iibb} en concepto de IIBB `);
-                                         } else {
-                                            document.getElementById("txtIdprecioDescuento").value = precioFinal;
-                                        } 
+                                        
                                 } else {
-                                    precioDesc = (precioOrig*cantidad)*(05/100);
+                                    precioDesc = (precioOrig*cantidad)/1.05;
                                     precioFinal = precioDesc; 
                                     precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
-                                     if (precioFinal > 120) { //calculo IIBB
-                                            iibb = precioFinal * 0.10; 
-                                            document.getElementById("txtIdprecioDescuento").value = precioFinal;
-                                            alert(`Usted pago $${iibb} en concepto de IIBB `);
-                                        } else {
-                                            document.getElementById("txtIdprecioDescuento").value = precioFinal;
-                                        } 
-                                    document.getElementById("txtIdprecioDescuento").value = precioDesc;
+                                 
                                 }
                         }
                         break;
-                   
-                 }
-        
-            
-             }
+                        
+                    default:
+                        precioFinal = precioOrig*cantidad;
+                    break;
+                }
+
+    if (precioFinal > 120) { //calculo IIBB
+        iibb = precioFinal * 0.10; 
+        document.getElementById("txtIdprecioDescuento").value = precioFinal.toFixed(2);
+            alert(`Usted pago $${iibb.toFixed(2)} en concepto de IIBB `);
+        } else {
+           document.getElementById("txtIdprecioDescuento").value = precioFinal.toFixed(2); 
+            }
+
 }
     
    
