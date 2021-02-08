@@ -87,7 +87,7 @@ function dividir()
 	numerodos = parseInt(numerodos);
 
 		// construyo un condicional para excluir la posibilidad de división por 0
-		if (numerodos === 0) {
+		if (numerodos == 0) {
 			resultado = "división por cero no admitida";
 		} else {
 			//Preparo la operación de las variables numerouno y numero dos, dentro del valor de la variable resultado
