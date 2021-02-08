@@ -13,7 +13,7 @@ function mostrar()
 	estadoC = document.getElementById("estadoCivil").value;
 	
 	//Publico en pantalla
-	if (edad > 18 || estadoC === "Soltero" ) {
+	if (edad > 18 || estadoC == "Soltero" ) {
 		alert(`Es soltero y no es menor.`);
 	}
 

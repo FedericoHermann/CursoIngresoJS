@@ -2,7 +2,9 @@ function mostrar()
 {
 	//declaro variables
 	let random;
-		
+	
+	//Asigno valores
+	
 	random = Math.floor(Math.random() * 10)+1;
     
 	//parseo para utilizar enteros.
