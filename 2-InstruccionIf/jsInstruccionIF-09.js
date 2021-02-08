@@ -1,18 +1,15 @@
 function mostrar()
 {
 	//declaro variables
-	let min;
-	let max;
 	let random;
-
-	//asigno valores a los topes del rango
-	min = 1;
-	max = 10;
-
+		
+	random = Math.floor(Math.random() * 10)+1;
+    
 	//parseo para utilizar enteros.
-	
 
+	random = parseInt(random);
+	
 	//publico en pantalla el valor de random
-	alert(`Su número aleatorio es ${}`)
+	alert(`Su número aleatorio es ${random}`)
 
 }//FIN DE LA FUNCIÓN

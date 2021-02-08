@@ -84,13 +84,13 @@ function CalcularPrecio ()
                             precioFinal = precioDesc; 
                             precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
                                 
-                            } else {
-                                if (marca === "FelipeLamparas") {
+                        } else {
+                            if (marca === "FelipeLamparas") {
                                     precioDesc = (precioOrig*cantidad)/1.1;
                                     precioFinal = precioDesc; 
                                     precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
                                         
-                                } else {
+                            } else {
                                     precioDesc = (precioOrig*cantidad)/1.05;
                                     precioFinal = precioDesc; 
                                     precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
@@ -126,4 +126,4 @@ function CalcularPrecio ()
 
     
 
-
+}
