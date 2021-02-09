@@ -1,4 +1,5 @@
-function mostrar() {
+function mostrar() 
+{
 	//Declaro Variables
 	let mes;
 
@@ -7,7 +8,8 @@ function mostrar() {
 
 	//preparo la condición
 
-	switch (mes) {
+	switch (mes) 
+	{
 		case "Enero":
 			alert("Que comiences bien el año")
 			break;

@@ -6,7 +6,8 @@ Hermann Federico
 Debemos lograr tomar nombre y edad por ID y mostrarlos concatenados 
 ej.: "Usted se llama José y tiene 66 años" 	
 Ejercicio 05*/
-function mostrar() {
+function mostrar() 
+{
 	//reservo memoria para alojar las variables correspondientes a los datos necesarios
 	let nombre;
 	let edad;

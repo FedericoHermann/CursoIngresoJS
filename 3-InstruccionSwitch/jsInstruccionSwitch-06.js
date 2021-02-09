@@ -1,4 +1,5 @@
-function mostrar() {
+function mostrar() 
+{
 	//declaro variable
 	let hora;
 
@@ -8,7 +9,8 @@ function mostrar() {
 
 	//Preparo condición
 
-	switch (hora) {
+	switch (hora) 
+	{
 
 		case 20:
 		case 21:

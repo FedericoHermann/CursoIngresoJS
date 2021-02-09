@@ -11,9 +11,12 @@ function mostrar() {
 
 	//Publico la edad en pantalla
 
-	if (edad == 15) {
+	if (edad == 15) 
+	{
 		alert(`Niña Bonita!`)
-	} else {
+	} 
+	else 
+	{
 		alert(`Su edad es: ${edad} años.`)
 	}
 

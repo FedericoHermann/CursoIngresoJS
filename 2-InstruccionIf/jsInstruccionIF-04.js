@@ -10,7 +10,8 @@ function mostrar() {
 
 	//Publico en pantalla
 
-	if (edad >= 13 && edad <= 17) {
+	if (edad >= 13 && edad <= 17) 
+	{
 		alert(`Usted es Adolescente`);
 	}
 

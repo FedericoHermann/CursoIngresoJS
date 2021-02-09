@@ -9,9 +9,12 @@ function mostrar() {
 	edad = parseInt(edad);
 
 	//Publico en pantalla
-	if (edad >= 18) {
+	if (edad >= 18) 
+	{
 		alert(`Usted es mayor de edad`);
-	} else {
+	} 
+	else 
+	{
 		alert(`Usted es menor de edad`);
 	}
 

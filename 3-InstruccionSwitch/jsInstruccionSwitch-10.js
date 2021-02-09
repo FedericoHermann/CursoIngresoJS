@@ -1,4 +1,5 @@
-function mostrar() {
+function mostrar() 
+{
 	//declaro variables
 	let estacion;
 	let destino;
@@ -9,8 +10,10 @@ function mostrar() {
 
 	//evaluo condiciones
 
-	if (estacion == "Invierno") { //evaluamos invierno
-		switch (destino) {
+	if (estacion == "Invierno") 
+	{ //evaluamos invierno
+		switch (destino) 
+		{
 			case "Bariloche":
 				alert(`Se Viaja`);
 				break;
@@ -19,9 +22,13 @@ function mostrar() {
 				alert(`No se Viaja`);
 				break;
 		}
-	} else {
-		if (estacion == "Verano") { //evaluamos verano
-			switch (destino) {
+	} 
+	else 
+	{
+		if (estacion == "Verano") 
+		{ //evaluamos verano
+			switch (destino) 
+			{
 				case "Cataratas":
 				case "Mar del plata":
 					alert(`Se Viaja`);
@@ -32,12 +39,18 @@ function mostrar() {
 					break;
 			}
 
-		} else {
-			if (estacion == "Otoño") { //evaluamos Otoño
+		}
+		else 
+		{
+			if (estacion == "Otoño") 
+			{ //evaluamos Otoño
 				alert(`Se Viaja`)
 
-			} else {
-				switch (destino) {
+			}
+			else
+			{
+				switch (destino) 
+				{
 					case "Bariloche":
 						alert(`No se Viaja`);
 						break;

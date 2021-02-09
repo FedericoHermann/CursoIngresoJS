@@ -7,7 +7,8 @@ transformarlos a enteros (parseInt) y Sumarlos.
 mostrar el resulto por medio de "ALERT"
 
 Ejercicio 06*/
-function sumar() {
+function sumar() 
+{
 	//declaro las variables y reservo espacio en la memoria
 	let numerouno;
 	let numerodos;

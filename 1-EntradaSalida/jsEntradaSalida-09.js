@@ -8,7 +8,8 @@ mostrar el importe con un aumento del 10 %
 en el cuadro de texto "RESULTADO".
 
 Ejercicio 09*/
-function mostrarAumento() {
+function mostrarAumento()
+{
 	//declaro las variables y reservo espacio en la memoria
 	let sueldo;
 	let resultado;

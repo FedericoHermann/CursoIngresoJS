@@ -22,9 +22,12 @@ function SacarResto() {
 	divisor = parseInt(divisor);
 
 	// construyo un condicional para excluir la posibilidad de división por 0
-	if (divisor == 0) {
+	if (divisor == 0) 
+	{
 		resto = "división por cero no admitida";
-	} else {
+	} 
+	else 
+	{
 		//Preparo la operación de las variables dividendo y divisor, dentro del valor de la variable resto
 		resto = dividendo % divisor;
 	}

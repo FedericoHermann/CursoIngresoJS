@@ -1,4 +1,5 @@
-function mostrar() {
+function mostrar() 
+{
 	//declaro variables
 	let random;
 

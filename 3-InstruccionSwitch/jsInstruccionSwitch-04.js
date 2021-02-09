@@ -1,4 +1,5 @@
-function mostrar() {
+function mostrar() 
+{
 	//Declaro Variables
 	let mes;
 
@@ -6,7 +7,8 @@ function mostrar() {
 	mes = document.getElementById("txtIdMes").value;
 
 	//preparo la condición
-	switch (mes) {
+	switch (mes) 
+	{
 		case "Febrero":
 			alert("Este mes tiene 28 días.")
 			break;

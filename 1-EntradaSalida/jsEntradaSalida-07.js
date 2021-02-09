@@ -9,7 +9,8 @@ ej.: "la Resta es 750"
 
 Ejercicio 07*/
 
-function sumar() {
+function sumar() 
+{
 	//declaro las variables y reservo espacio en la memoria
 	let numerouno;
 	let numerodos;

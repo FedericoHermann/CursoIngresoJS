@@ -1,4 +1,5 @@
-function mostrar() {
+function mostrar() 
+{
 
 	//declaro variables
 	let estacion;
@@ -15,9 +16,11 @@ function mostrar() {
 
 	//Considero los destinos en base a la estación elegida
 
-	if (estacion == "Invierno") { //calculo Invierno
+	if (estacion == "Invierno") 
+	{ //calculo Invierno
 
-		switch (destino) {
+		switch (destino) 
+		{
 			case "Bariloche":
 				estadiaAjus = estadia * 1.2;
 				alert(`Su estadía tiene un valor de $${estadiaAjus}`);
@@ -38,9 +41,13 @@ function mostrar() {
 				alert(`Su estadía tiene un valor de $${estadia}`);
 				break;
 		}
-	} else {
-		if (estacion == "Verano") { // calculo Verano
-			switch (destino) {
+	} 
+	else 
+	{
+		if (estacion == "Verano") 
+		{ // calculo Verano
+			switch (destino) 
+			{
 				case "Bariloche":
 					estadiaAjus = estadia - (estadia * 0.2);
 					alert(`Su estadía tiene un valor de $${estadiaAjus}`);
@@ -61,9 +68,13 @@ function mostrar() {
 					alert(`Su estadía tiene un valor de $${estadia}`);
 					break;
 			}
-		} else {
-			if (estacion == "Otoño" || estacion == "Primavera") { //Calculo Otoño y Primavera
-				switch (destino) {
+		} 
+		else 
+		{
+			if (estacion == "Otoño" || estacion == "Primavera") 
+			{ //Calculo Otoño y Primavera
+				switch (destino) 
+				{
 					case "Bariloche":
 						estadiaAjus = estadia * 1.1;
 						alert(`Su estadía tiene un valor de $${estadiaAjus}`);

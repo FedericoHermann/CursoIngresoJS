@@ -1,4 +1,5 @@
-function mostrar() {
+function mostrar() 
+{
 
 	//Declaro Variables
 	let destino;
@@ -8,7 +9,8 @@ function mostrar() {
 
 	//Calculo condición
 
-	switch (destino) {
+	switch (destino) 
+	{
 		case "Bariloche":
 		case "Ushuaia":
 			alert(`Aqui hace Frío`)
