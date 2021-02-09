@@ -1,5 +1,4 @@
-function mostrar()
-{
+function mostrar() {
 
 	//declaro variables
 	let edad;
@@ -11,8 +10,8 @@ function mostrar()
 
 	//Publico en pantalla
 
-	if (edad >=13 && edad <=17) {
-		alert (`Usted es Adolescente`);
+	if (edad >= 13 && edad <= 17) {
+		alert(`Usted es Adolescente`);
 	}
 
 }//FIN DE LA FUNCIÓN

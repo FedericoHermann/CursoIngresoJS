@@ -1,5 +1,4 @@
-function mostrar()
-{
+function mostrar() {
 	//Declaro Variables
 	let mes;
 
@@ -24,13 +23,8 @@ function mostrar()
 		case "Diciembre":
 			alert("Felices Fiestas!!!.")
 			break;
-	
+
 		default:
 			break;
 	}
-
-	
-
-
-
 }//FIN DE LA FUNCIÓN

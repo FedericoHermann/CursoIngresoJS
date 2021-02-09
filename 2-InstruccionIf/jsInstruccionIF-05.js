@@ -1,5 +1,4 @@
-function mostrar()
-{
+function mostrar() {
 	//declaro variables
 	let edad;
 

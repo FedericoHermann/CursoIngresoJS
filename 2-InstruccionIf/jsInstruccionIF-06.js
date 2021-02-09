@@ -1,5 +1,4 @@
-function mostrar()
-{
+function mostrar() {
 	//declaro variables
 	let edad;
 
@@ -9,18 +8,18 @@ function mostrar()
 	edad = parseInt(edad);
 
 	//Publico en pantalla
-	if (edad >=18) {
+	if (edad >= 18) {
 		alert(`Usted es mayor de edad`);
 
 	} else {
-		
-		if (edad >=13 && edad <=17) {
-			alert (`Usted es Adolescente`);
-		
-		} else  {
+
+		if (edad >= 13 && edad <= 17) {
+			alert(`Usted es Adolescente`);
+
+		} else {
 			alert(`Usted es un niño`);
 		}
-		
+
 	}
 
 

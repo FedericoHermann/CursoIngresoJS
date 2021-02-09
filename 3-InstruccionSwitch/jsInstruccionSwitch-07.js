@@ -1,6 +1,5 @@
-function mostrar()
-{
-	
+function mostrar() {
+
 	//Declaro Variables
 	let destino;
 
@@ -13,7 +12,7 @@ function mostrar()
 		case "Bariloche":
 			alert(`Punto Cardinal: Oeste`)
 			break;
-		
+
 		case "Cataratas":
 			alert(`Punto Cardinal: Norte`)
 			break;
@@ -21,15 +20,15 @@ function mostrar()
 		case "Mar del plata":
 			alert(`Punto Cardinal: Este`)
 			break;
-		
+
 		case "Ushuaia":
 			alert(`Punto Cardinal: Sur`)
 			break;
-					
+
 		default:
 			break;
 	}
 
-	
+
 
 }//FIN DE LA FUNCIÓN

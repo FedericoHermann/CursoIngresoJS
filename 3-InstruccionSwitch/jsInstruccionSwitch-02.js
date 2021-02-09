@@ -1,5 +1,4 @@
-function mostrar()
-{
+function mostrar() {
 	//Declaro Variables
 	let mes;
 
@@ -52,11 +51,11 @@ function mostrar()
 		case "Noviembre":
 			alert("Ya pasamos el frio, ahora calor!!!.")
 			break;
-			
+
 		case "Diciembre":
 			alert("Ya pasamos el frio, ahora calor!!!.")
 			break;
-	
+
 		default:
 			break;
 	}

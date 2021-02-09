@@ -1,6 +1,5 @@
-function mostrar()
-{
-	
+function mostrar() {
+
 	//Declaro Variables
 	let destino;
 
@@ -14,7 +13,7 @@ function mostrar()
 		case "Ushuaia":
 			alert(`Aqui hace Frío`)
 			break;
-		
+
 		case "Cataratas":
 		case "Mar del plata":
 			alert(`Aquí hace Calor`)

@@ -1,11 +1,10 @@
-function mostrar()
-{
+function mostrar() {
 
 	//declaro variables
 	let edad;
 
 	//tomo la edad  
-	
+
 	edad = document.getElementById("txtIdEdad").value;
 
 	edad = parseInt(edad);
@@ -18,6 +17,6 @@ function mostrar()
 		alert(`Su edad es: ${edad} años.`)
 	}
 
-	
+
 
 }//FIN DE LA FUNCIÓN
