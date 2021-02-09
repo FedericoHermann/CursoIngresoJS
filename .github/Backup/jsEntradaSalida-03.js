@@ -19,3 +19,4 @@ function mostrar()
 	//Deja con carácter vacío el valor de la caja de texto creada en HTML
 }
 
+
