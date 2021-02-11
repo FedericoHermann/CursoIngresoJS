@@ -21,6 +21,8 @@ function mostrar()
 		document.getElementById("txtIdNumero").value = numero;	//escribo en pantalla
 
 		numeroIngresado = ""; //reinicio el valor de la variable
+		break;
+		
 	}
 
 }//FIN DE LA FUNCIÓN
