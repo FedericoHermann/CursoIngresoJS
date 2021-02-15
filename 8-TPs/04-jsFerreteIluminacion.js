@@ -21,7 +21,9 @@ function CalcularPrecio ()
     //tomo datos del usuario y los cargo en las variables correspondientes.
 
     marca = document.getElementById("Marca").value; //tomo la marca como valor "string" del dropdown menu.
+
     cantidad = document.getElementById("txtIdCantidad").value; //tomo la cantidad ingresada de lamparas.
+    
     cantidad = parseInt(cantidad); //parseo cantidad para convertir su contenido en un número entero.
 
     /* asigno el precio por unidad.
@@ -59,11 +61,11 @@ function CalcularPrecio ()
                 un descuento del 25 % y si es de otra marca el descuento es del 20%.*/
                 if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") 
                 { 
-                    decuento = 0.25;
+                    descuento = 0.25;
                 } 
                 else 
                 {
-                    decuento = 0.2;
+                    descuento = 0.2;
                 }
                 break;
 
