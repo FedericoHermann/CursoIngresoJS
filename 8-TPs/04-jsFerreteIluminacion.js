@@ -10,143 +10,112 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
-     
-    //defino variables
-    let cantidad;
+    //defino variables a utilizar.
     let marca;
-    let precioOrig;
-    let precioDesc;
-    let precioFinal;
+    let cantidad;
+    let descuento;
+    let precio;
     let iibb;
+    let total;
 
-    //asigno valores a las cantidades
-    cantidad = document.getElementById("txtIdCantidad").value;
-    cantidad = parseInt(cantidad);
+    //tomo datos del usuario y los cargo en las variables correspondientes.
 
-    //asigno valores a la elección de "marca"
-    marca = document.getElementById("Marca").value;
+    marca = document.getElementById("Marca").value; //tomo la marca como valor "string" del dropdown menu.
+
+    cantidad = document.getElementById("txtIdCantidad").value; //tomo la cantidad ingresada de lamparas.
     
+    cantidad = parseInt(cantidad); //parseo cantidad para convertir su contenido en un número entero.
 
-    //establezco el precio original
-    precioOrig = 35;
+    /* asigno el precio por unidad.
+    Tomando en cuenta que todas las lámparas están en oferta al mismo precio de $35 pesos final.*/
 
-    //Bloque de código para condiciones de venta a aplicar según cantidad y marca.
-    if (cantidad >= 6) 
+    precio = 35; 
+    
+    //con los valores esenciales tomados, pasamos a la etapa de cálculo.
+
+
+    if (cantidad >= 6)
+    //A.Si compra 6 o más lamparitas bajo consumo tiene un descuento del 50%.
     {
-         //A.Si compra 6 o más  lamparitas bajo consumo tiene un descuento del 50%. 
-         precioDesc = (precioOrig*cantidad)*(50/100);
-         precioFinal = precioDesc; 
-         precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
-            if (precioFinal > 120) 
-            { //calculo IIBB
-                iibb = precioFinal * 0.10; 
-                document.getElementById("txtIdprecioDescuento").value = precioFinal;
-                alert(`Usted pago $${iibb} en concepto de IIBB `);
-            } 
-            else 
-            {
-                document.getElementById("txtIdprecioDescuento").value = precioFinal; 
-            } 
+       descuento = 0.5; 
     } 
     else 
     {
-            /*B.Si compra 5 lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 % 
-            y si es de otra marca el descuento es del 30%.*/
         switch (cantidad) 
         {
             case 5:
+                /*B.Si compra 5 lamparitas bajo consumo marca "ArgentinaLuz" se hace un descuento del 40 % 
+                y si es de otra marca el descuento es del 30%.*/
                 if (marca == "ArgentinaLuz") 
                 {
-                    precioDesc = (precioOrig*cantidad)/1.4;
-                    precioFinal = precioDesc; 
-                    precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
-                                
+                    descuento = 0.4;
                 } 
                 else 
                 {
-                    precioDesc = (precioOrig*cantidad)/1.3;
-                    precioFinal = precioDesc; 
-                    precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado      
+                   descuento = 0.3; 
                 }
                 break;
-            /*C.Si compra 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas” 
-            se hace un descuento del 25 % y si es de otra marca el descuento es del 20%.*/
 
             case 4:
+                /*C.Si compra 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas” se hace 
+                un descuento del 25 % y si es de otra marca el descuento es del 20%.*/
                 if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") 
-                {
-                    precioDesc = (precioOrig*cantidad)/1.25;
-                    precioFinal = precioDesc; 
-                    precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
-                                
+                { 
+                    descuento = 0.25;
                 } 
                 else 
                 {
-                    precioDesc = (precioOrig*cantidad)/1.2;
-                    precioFinal = precioDesc; 
-                    precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
+                    descuento = 0.2;
                 }
-                        
                 break;
 
-            /*D. Si compra 3 lamparitas bajo consumo marca "ArgentinaLuz"  el descuento es del 15%, 
-            si es  “FelipeLamparas” se hace un descuento del 10 % y si es de otra marca un 5%.*/
             case 3:
-                if (marca == "ArgentinaLuz") 
+                /*Si compra 3  lamparitas bajo consumo marca "ArgentinaLuz"  el descuento es del 15%, si es  
+                “FelipeLamparas” se hace un descuento del 10 % y si es de otra marca un 5%.*/
+                if (marca == "ArgentinaLuz")
                 {
-                    precioDesc = (precioOrig*cantidad)/1.15;
-                    precioFinal = precioDesc; 
-                    precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
-                                
+                    descuento = 0.15;
                 } 
                 else 
                 {
                     if (marca == "FelipeLamparas") 
                     {
-                        precioDesc = (precioOrig*cantidad)/1.1;
-                        precioFinal = precioDesc; 
-                        precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
-                                        
+                        descuento = 0.1;
                     } 
                     else 
                     {
-                        precioDesc = (precioOrig*cantidad)/1.05;
-                        precioFinal = precioDesc; 
-                        precioFinal = parseFloat(precioFinal); //Determino el precio final con el descuento aplicado
-                                 
+                        descuento = 0.05;
                     }
+                   
                 }
                 break;
-                        
+                
             default:
-                precioFinal = precioOrig*cantidad;
+
+                descuento = 0;
+
                 break;
         }
-    }
+        
 
-    if (precioFinal > 120) 
-    { //calculo IIBB
-        iibb = precioFinal * 0.10; 
-        document.getElementById("txtIdprecioDescuento").value = precioFinal.toFixed(2);
-        alert(`Usted pago $${iibb.toFixed(2)} en concepto de IIBB `);
-    } 
-    else 
-    {
-        document.getElementById("txtIdprecioDescuento").value = precioFinal.toFixed(2); 
-    }
+    }  
+
+    //calculamos el importe total
+    total = (precio - (precio*descuento))*cantidad;
+
+        /*E.Si el importe final con descuento suma más de $120  se debe sumar un 10% de ingresos brutos 
+        en informar del impuesto con el siguiente mensaje:”Usted pago X de IIBB.”, siendo X el impuesto que se pagó.*/ 
+        if (total > 120) 
+        {
+            iibb = total * 0.1; //cargo el valor de los Ingresos Brutos a la variable.
+            alert(`Usted pagó ${iibb} de IIBB`); //Informo el importe del impuesto en pantalla.
+
+            //Modifico el valor total con los Ingresos Brutos sumados.
+            total = total + iibb;
+        } 
+
+
+    //finalmente enviamos el valor obtenido al cuadro de texto
+    document.getElementById("txtIdprecioDescuento").value = total;
 
 }
-    
-   
-    
-       
-            
-
-
-
-       
-    
-
-    
-
-
