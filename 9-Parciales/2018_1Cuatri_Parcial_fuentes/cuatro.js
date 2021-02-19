@@ -18,6 +18,7 @@ numeroDos = parseFloat(numeroDos);
     if (numeroUno == numeroDos) //Evaluamos la posibilidad de que sean iguales ambos números
     {
         alert("El primer número es " + numeroUno + " el segundo número es " + numeroDos);
+        
     } 
     else 
     {

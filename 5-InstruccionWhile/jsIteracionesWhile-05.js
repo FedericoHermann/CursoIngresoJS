@@ -9,25 +9,26 @@ function mostrar()
 	//Se toman valores del usuario
 	sexoIngresado = prompt("ingrese f ó m .");
 
-	//Evaluo que el caracter ingresado corresponda a "f" o "m"	
-	if (sexoIngresado !="f" && sexoIngresado !="m" && sexoIngresado != "F" && sexoIngresado != "M") 
-	{
-		alert(`Por Favor ingrese solamente " F " o " f " para Femenino y " M " o " m " para Masculino`);
+	sexoIngresado = sexoIngresado.toLocaleLowerCase()
 
+	//Evaluo que el caracter ingresado corresponda a "f" o "m"	
+	while (sexoIngresado !="f" && sexoIngresado !="m") 
+	{
+		alert(`Por Favor ingrese solamente " f " para Femenino y " m " para Masculino`);
+
+		//Se toman nuevamente valores del usuario
+		sexoIngresado = prompt("ingrese f ó m .");
+
+		sexoIngresado = sexoIngresado.toLocaleLowerCase()
+	} 
+
+	if (sexoIngresado == "f") 
+	{
+		sexoIngresado = "Femenino";
 	} 
 	else 
 	{
-		switch (sexoIngresado) 
-		{
-			case "f": //evaluo condicion
-			case "F":
-				sexoIngresado = "Femenino";
-				break;
-		
-			default:
-				sexoIngresado = "Masculino";
-				break;
-		}
+		sexoIngresado = "Masculino";
 	}
 	
 	//Muestra a traves de la caja de texto.
