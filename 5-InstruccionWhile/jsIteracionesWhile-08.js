@@ -22,28 +22,27 @@ function mostrar()
 	respuesta='si'; //inicio la respuesta para validar el loop inicial
 
 	//hago loop de conteo
-	while (respuesta == "si")
+	while (respuesta.toLowerCase() == "si")
 	{
-		if (respuesta == "si")
+		
+		contador ++; //asigno posición de número
+
+		numero = prompt(`Ingrese su número nº${contador}`) //tomo valor del usuario
+
+		numero = parseFloat(numero); //parseo el valor ingresado
+
+		if (numero > 0) 
 		{
-			contador ++; //asigno posición de número
-
-			numero = prompt(`Ingrese su número nº${contador}`) //tomo valor del usuario
-
-			numero = parseFloat(numero); //parseo el valor ingresado
-
-			if (numero > 0) 
-			{
-				sumaPositivos = sumaPositivos + numero; //sumo los valores positivos
-			} 
-			else 
-			{
-				multiplicacionNegativos = multiplicacionNegativos * numero; // multiplico negativos
-			}
-
-			respuesta = prompt(`¿Desea sumar otro número?`, `ingrese " si ", para seguir operando`);
-
+			sumaPositivos = sumaPositivos + numero; //sumo los valores positivos
+		} 
+		else 
+		{
+			multiplicacionNegativos = multiplicacionNegativos * numero; // multiplico negativos
 		}
+
+		respuesta = prompt(`¿Desea sumar otro número?`, `ingrese " si ", para seguir operando`);
+		
+	
 	}
 
 	// Se publican en la caja de texto los datos
