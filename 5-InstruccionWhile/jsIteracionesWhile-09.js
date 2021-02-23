@@ -47,7 +47,7 @@ function mostrar()
 
 	//iniciar variables
 	banderaDelPrimeroPar= true;
-	banderaDelPrimeroImpar= true;
+	banderaDelPrimeroNegativo= true;
 	respuesta='si';
 	
 	while(respuesta=="si") //Arranco el Loop 
@@ -81,6 +81,6 @@ function mostrar()
 	}
 	txtIdMaximo.value= "El máximo Negativo es "+ negativoMayor;
 	txtIdMinimo.value= "El mínimo Par es "+ esparMenor;
- //me tira "undefined y no puedo encontrar la falla, lo subo para poder entregarlo y sigo avanzando hasta arreglarlo"
+
 
 }//FIN DE LA FUNCIÓN
