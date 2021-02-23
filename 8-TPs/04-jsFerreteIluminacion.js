@@ -52,7 +52,7 @@ function CalcularPrecio ()
                 } 
                 else 
                 {
-                   descuento = 0.3; 
+                    descuento = 0.3; 
                 }
                 break;
 
@@ -96,7 +96,6 @@ function CalcularPrecio ()
 
                 break;
         }
-        
 
     }  
 

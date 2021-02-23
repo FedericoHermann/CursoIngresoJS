@@ -24,6 +24,8 @@ function mostrar()
 	let promedioPositivos;
 	let promedioNegativos;
 	let diferencia;
+	let maximoNegativo;
+	let minimoPar;
 
 	//Asigno valores iniciales
 	respuesta="si";
@@ -39,27 +41,44 @@ function mostrar()
 		numeroIngresado = prompt(`Ingrese un número:`); //pido valor
 		numeroIngresado = parseInt(numeroIngresado);  //parseo valor
 
-			if (numeroIngresado %2 == 0 ) 
-			{
-				contadorPares ++; //aumenta el contador de pares
-			}
+		while (IsNaN(numeroIngresado)) 
+		{
+			numeroIngresado = prompt(`Error de Ingreso, Por favor Ingrese un número:`); //pido valor nuevamente
+			numeroIngresado = parseInt(numeroIngresado);  //parseo valor nuevamente
+		}
 
-			if (numeroIngresado < 0 ) 
+		if (numeroIngresado %2 == 0 ) 
+		{
+			if ( numeroIngresado < minipar || contadorPares == 0 )
 			{
-				sumaNegativos = sumaNegativos + numeroIngresado; //aumenta la suma de negativos
-				contadorNegativos ++; //aumenta el contador de negativos
+				minimoPar = numeroIngresado;
+			} 
+			contadorPares ++; //aumenta el contador de pares
+		}
+
+		if (numeroIngresado < 0 ) 
+		{
+			if (numeroIngresado > maximoNegativo || contadorNegativos == 0) 
+			{
+				maximoNegativo = numeroIngresado;
 			}
 			else
-			{	if (numeroIngresado >0) 
-				{
-					sumaPositivos = sumaPositivos + numeroIngresado; //aumenta la suma de positivos
-					contadorPositivos ++; //aumenta el contador de positivos
-				}
-				else
-				{
-					contadorCeros ++; //aumenta el contador de ceros
-				}
+			{
+				sumaNegativos = sumaNegativos + numeroIngresado; //aumenta la suma de negativos	
 			}
+			contadorNegativos ++; //aumenta el contador de negativos
+		}
+		else
+		{	if (numeroIngresado >0) 
+			{
+				sumaPositivos = sumaPositivos + numeroIngresado; //aumenta la suma de positivos
+				contadorPositivos ++; //aumenta el contador de positivos
+			}
+			else
+			{
+				contadorCeros ++; //aumenta el contador de ceros
+			}
+		}
 
 		respuesta=prompt("desea continuar?", "si/no");
 		respuesta = respuesta.toLocaleLowerCase()
