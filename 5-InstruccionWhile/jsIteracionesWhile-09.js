@@ -39,9 +39,7 @@ function mostrar()
 {	
 	// declarar variables
 	let numeroIngresado;
-	let negativo;
 	let negativoMayor;
-	let espar;
 	let esparMenor;
 	let banderaDelPrimeroPar;
 	let banderaDelPrimeroNegativo;
@@ -57,33 +55,32 @@ function mostrar()
 		numeroIngresado = prompt(`Ingrese un número:`); //pido valor
 		numeroIngresado = parseInt(numeroIngresado);  //parseo valor
 
-		if (banderaDelPrimeroPar == true || numeroIngresado % 2 == 0 ) //evaluo condicion de par
+		if (banderaDelPrimeroPar == true && numeroIngresado % 2 == 0 ) //evaluo condicion de par
  		{
-			espar = numeroIngresado;
-
-			banderaDelPrimeroPar == false;
-
-			if (espar < esparMenor)
-			{
-				positivoMenor = positivo;	
-			}
+			esparMenor = numeroIngresado;
+			banderaDelPrimeroPar = false;
 		}
-
-		if (banderaDelPrimeroNegativo == true || numeroIngresado < 0) //evaluo condicion de negativo
+		
+		if (banderaDelPrimeroNegativo == true && numeroIngresado < 0) //evaluo condicion de negativo
 		{
-			negativo = numeroIngresado;
-
-			banderaDelPrimeroNegativo == false;
-
-			if (negativo > negativoMayor)
-			{
-				negativoMayor = negativo;	
-			}
+			negativoMayor = numeroIngresado;
+			banderaDelPrimeroNegativo = false;
 		}
+			
+		if (numeroIngresado % 2 == 0 && numeroIngresado < esparMenor) //Comparo par
+		{
+			esparMenor = numeroIngresado;		
+		}	
+
+		if (numeroIngresado < 0 && numeroIngresado > negativoMayor) //Comparo negativo
+		{
+			negativoMayor = numeroIngresado;
+		}		
+		
 		respuesta=prompt("desea continuar?", "responda si/no");
 	}
 	txtIdMaximo.value= "El máximo Negativo es "+ negativoMayor;
-	txtIdMinimo.value= "El mínimo Positivo es "+ esparMenor;
- //me tira "undefined y no puedo encontrar la fala, lo subo para poder entregarlo y sigo avanzando hasta arreglarlo"
+	txtIdMinimo.value= "El mínimo Par es "+ esparMenor;
+ //me tira "undefined y no puedo encontrar la falla, lo subo para poder entregarlo y sigo avanzando hasta arreglarlo"
 
 }//FIN DE LA FUNCIÓN
