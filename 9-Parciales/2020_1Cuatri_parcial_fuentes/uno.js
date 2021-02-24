@@ -26,7 +26,7 @@ function mostrar()
 
 	//Asigno valores iniciales 
 	
-	contadorDeProductos = 1;
+	contadorDeProductos = 0;
 	contadorAlcohol = 0;
 	contadorJabon = 0;
 	contadorBarbijo = 0;
@@ -136,22 +136,25 @@ function mostrar()
 	console.log(contadorBarbijo);
 	console.log(contadorJabon);
 
-	if ( contadorAlcohol > contadorBarbijo && contadorAlcohol > contadorJabon  ) 
+	if ( contadorAlcohol>contadorBarbijo && contadorAlcohol>contadorJabon  ) 
 	{
 		promedioDeCompra = precioAcumuladoAlcohol / cantidadComprasAlcohol;
 		alert(`El tipo de elemento con más unidades es Alcohol, con ${contadorAlcohol} unidades compradas y un promedio de compra de $${promedioDeCompra}`);
 	} 
 	else 
 	{
-		if (contadorBarbijo > contadorAlcohol && contadorBarbijo > contadorJabon) 
+		if (contadorBarbijo>contadorAlcohol && contadorBarbijo>contadorJabon) 
 		{
 			promedioDeCompra = precioAcumuladoBarbijo / cantidadComprasBarbijo;
 			alert(`El tipo de elemento con más unidades es Barbijo, con ${contadorBarbijo} unidades compradas y un promedio de compra de $${promedioDeCompra}`);
 		} 
 		else 
 		{
-			promedioDeCompra = precioAcumuladoJabon / cantidadComprasJabon;
-			alert(`El tipo de elemento con más unidades es Jabón, con ${contadorJabon} unidades compradas y un promedio de compra de $${promedioDeCompra}`);
+			if(contadorJabon>contadorAlcohol && contadorJabon>contadorBarbijo)
+			{
+				promedioDeCompra = precioAcumuladoJabon / cantidadComprasJabon;
+				alert(`El tipo de elemento con más unidades es Jabón, con ${contadorJabon} unidades compradas y un promedio de compra de $${promedioDeCompra}`);
+			}	
 		}
 	}
 
