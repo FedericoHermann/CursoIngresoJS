@@ -99,7 +99,6 @@ function mostrar()
 				contadorBarbijo = contadorBarbijo + cantidadProductos; //Cant. Barbijos comprado
 				cantidadComprasBarbijo ++; //Cant de veces que se compran barbijos
 				precioAcumuladoBarbijo = precioAcumuladoBarbijo + precioIngresado; //Valor acumulado de la compra de barbijos
-				console.log(contadorBarbijo);
 				break;
 
 			case "alcohol":
@@ -114,7 +113,6 @@ function mostrar()
 				contadorAlcohol = contadorAlcohol + cantidadProductos; //cant. alcoholes comprados
 				cantidadComprasAlcohol ++; //cant. veces que se compró alcohol
 				precioAcumuladoAlcohol = precioAcumuladoAlcohol + precioIngresado; //Valor acumulado de la compra de Alcohol
-				console.log(contadorAlcohol);
 				break;
 
 			case "jabon":
@@ -122,7 +120,6 @@ function mostrar()
 				contadorJabon = contadorJabon + cantidadProductos; //cant. de jabones comprados
 				cantidadComprasJabon ++; //cant. veces que se compra jabon
 				precioAcumuladoJabon = precioAcumuladoJabon + precioIngresado; //Valor acumulado de la compra de jabones
-				console.log(contadorJabon);
 				break;
 		}
 	}// fin del While
@@ -132,9 +129,6 @@ function mostrar()
 	alert(`La cantidad de unidades de Alcohol, más barato, es ${cantidadAlcohol} y su fabricante es ${fabricanteAlcohol}`);
 
 	//b) Del tipo con mas unidades, el promedio por compra
-	console.log(contadorAlcohol);
-	console.log(contadorBarbijo);
-	console.log(contadorJabon);
 
 	if ( contadorAlcohol>contadorBarbijo && contadorAlcohol>contadorJabon  ) 
 	{
